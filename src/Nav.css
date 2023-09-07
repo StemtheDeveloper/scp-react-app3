@@ -23,7 +23,7 @@
     margin: 10px;
 } */
 
-.Nav {
+.navBar {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -50,7 +50,7 @@
 
 /* Media Query for Mobile Screens */
 @media (max-width: 768px) {
-    .Nav {
+    .navBar {
         flex-direction: column; /* Stack items vertically */
         height: auto; /* Allow content to determine the height */
         padding: 1rem; /* Increase padding for better spacing */

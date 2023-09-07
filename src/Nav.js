@@ -10,7 +10,7 @@ import styles from "./styles.css";
 
 export default function Nav() {
   return (
-    <nav className="nav">
+    <nav className="navBar">
       <img src={SCPlogo} id="scpLogo" alt="SCP logo" />
       <Link to="/" className="site-title">
         SCP Foundation
