@@ -1,0 +1,41 @@
+.SubButtons {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  font-size: 20px;
+
+}
+
+.SubButton {
+  
+  height: auto;
+  width: auto;
+  background-color: black;
+  border: 1px;
+  border-color: white;
+  border-radius: 5px;
+  color: white;
+  padding: 2px;
+  margin: 2px;
+  font-size: 20px;
+
+}
+
+.SubButton:hover {
+  
+  height: auto;
+  width: auto;
+  background-color: gold;
+  border: 1px;
+  border-color: white;
+  border-radius: 5px;
+  color: orange;
+  padding: 2px;
+  margin: 2px;
+  font-size: 20px;
+
+}
+

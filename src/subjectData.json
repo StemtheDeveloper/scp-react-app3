@@ -1,0 +1,42 @@
+[
+  {
+    "SCP-ID": 1,
+    "name": "Plague Doctor",
+    "image_link": "./assets/SCP-049.png",
+    "subject_class": "Euclid",
+    "description": "A humanoid entity known for its medical capabilities. It can kill humans by touching them and then revive them as \"zombies\". It is to be contained in a standard humanoid containment cell.",
+    "containment_procedures": "SCP-049 is to be contained in a standard humanoid containment cell."
+  },
+  {
+    "SCP-ID": 2,
+    "name": "Shy Guy",
+    "image_link": "./assets/SCP-096.jpg",
+    "subject_class": "Euclid",
+    "description": "A tall, emaciated humanoid with heightened aggression. If it sees its own face, it will become enraged and attack anything in its path. It is to be kept in a steel cube at all times.",
+    "containment_procedures": "SCP-096 is to be kept in a steel cube at all times."
+  },
+  {
+    "SCP-ID": 3,
+    "name": "The Old Man",
+    "image_link": "./assets/SCP-106.jpeg",
+    "subject_class": "Keter",
+    "description": "An elderly humanoid with corrosive properties. It can create a pocket dimension that it can travel to and from at will. It is to be contained within a sealed container filled with acid.",
+    "containment_procedures": "SCP-106 is to be contained within a sealed container filled with acid."
+  },
+  {
+    "SCP-ID": 4,
+    "name": "The Sculpture",
+    "image_link": "./assets/SCP-173.webp",
+    "subject_class": "Euclid",
+    "description": "A statue-like entity that moves when unobserved. It can kill humans by snapping their necks. It is to be observed at all times by at least two personnel.",
+    "containment_procedures": "SCP-173 is to be observed at all times by at least two personnel."
+  },
+  {
+    "SCP-ID": 5,
+    "name": "The Hard-to-Destroy Reptile",
+    "image_link": "./assets/SCP-682.jpg",
+    "subject_class": "Keter",
+    "description": "A highly adaptive, reptilian creature with extreme hostility. It cannot be killed or contained permanently. It is currently being kept in a specially designed acid-resistant chamber.",
+    "containment_procedures": "SCP-682 is currently being kept in a specially designed acid-resistant chamber."
+  }
+]

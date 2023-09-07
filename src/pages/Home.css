@@ -1,0 +1,13 @@
+.Home {
+    width: 100vw;
+    height: 100vh;
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    
+}

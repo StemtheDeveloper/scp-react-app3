@@ -1,0 +1,24 @@
+.Nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: #161616;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 60px;
+    color: #fff;
+    width: 100%;
+    row-gap: 20px;
+    gap: 20px;
+}
+
+#scpLogo {
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+    margin: 10px;
+}
