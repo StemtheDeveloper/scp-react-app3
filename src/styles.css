@@ -71,9 +71,13 @@
     background-color: #1b1b1b;
     max-width: 50%; /* Set a maximum width of 50% initially */
     min-width: 100%;
-  
-    /* Add a media query for smaller screens */
-    @media (max-width: 50%) {
-      max-width: 100%; /* When the window is smaller than half the screen, set the width to 100% */
+    font-size: large;
+  }
+
+  /* Add a media query for smaller screens */
+  @media (max-width: 480) {
+    .subject-info {
+      max-width: 100%;
+      font-size: 2rem;
     }
   }
