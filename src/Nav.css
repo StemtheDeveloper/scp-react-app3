@@ -1,3 +1,5 @@
+/* working */
+
 /* .Nav {
     display: flex;
     justify-content: start;
@@ -59,5 +61,30 @@
 
     #scpLogo {
         margin: 10px auto; /* Center the logo */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+        cursor: pointer;
+    }
+
+    .menu-icon.open .bar:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    .menu-icon.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.open .bar:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
+    .nav-links {
+        display: none; /* Hide the menu items by default */
+    }
+
+    .nav-links.open {
+        display: block; /* Show the menu items when the menu is open */
     }
 }
