@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/scp-react-app3/static/css/main.41a3ce89.css",
-    "main.js": "/scp-react-app3/static/js/main.a9bb3797.js",
+    "main.css": "/scp-react-app3/static/css/main.b5528577.css",
+    "main.js": "/scp-react-app3/static/js/main.6000ccad.js",
     "static/js/787.80fb3168.chunk.js": "/scp-react-app3/static/js/787.80fb3168.chunk.js",
     "static/media/SCP-049.png": "/scp-react-app3/static/media/SCP-049.1372629cfc8ec332110a.png",
     "static/media/SCP logo.png": "/scp-react-app3/static/media/SCP logo.da3ffcfc78257f836102.png",
@@ -10,12 +10,12 @@
     "static/media/SCP-173.webp": "/scp-react-app3/static/media/SCP-173.7bd3f06fdb2e21c6dded.webp",
     "static/media/SCP-106.jpeg": "/scp-react-app3/static/media/SCP-106.f7c7f3ab536eb959fcd0.jpeg",
     "index.html": "/scp-react-app3/index.html",
-    "main.41a3ce89.css.map": "/scp-react-app3/static/css/main.41a3ce89.css.map",
-    "main.a9bb3797.js.map": "/scp-react-app3/static/js/main.a9bb3797.js.map",
+    "main.b5528577.css.map": "/scp-react-app3/static/css/main.b5528577.css.map",
+    "main.6000ccad.js.map": "/scp-react-app3/static/js/main.6000ccad.js.map",
     "787.80fb3168.chunk.js.map": "/scp-react-app3/static/js/787.80fb3168.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.41a3ce89.css",
-    "static/js/main.a9bb3797.js"
+    "static/css/main.b5528577.css",
+    "static/js/main.6000ccad.js"
   ]
 }
