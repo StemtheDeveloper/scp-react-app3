@@ -39,7 +39,6 @@
     color: #fff;
     text-decoration: none;
     display: flex;
-    align-items: center;
     gap: 0.5rem;
 }
 
@@ -108,7 +107,7 @@ nav .menu span {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
     nav .menu {
         display: flex;
         align-items: center;
