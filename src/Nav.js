@@ -51,37 +51,39 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav>
-      <img src={SCPlogo} id="scpLogo" alt="SCP logo" />
+    <>
+      <nav>
+        <img src={SCPlogo} id="scpLogo" alt="SCP logo" />
 
-      <Link to="/" className="site-title">
-        SCP Foundation
-      </Link>
+        <Link to="/" className="site-title">
+          SCP Foundation
+        </Link>
 
-      <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </div>
+        <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
 
-      <ul className={menuOpen ? "open" : ""}>
-        <li>
-          <NavLink to="/Scp049">SCP-049</NavLink>
-        </li>
-        <li>
-          <NavLink to="/Scp096">SCP-096</NavLink>
-        </li>
-        <li>
-          <NavLink to="/Scp106">SCP-106</NavLink>
-        </li>
-        <li>
-          <NavLink to="/Scp173">SCP-173</NavLink>
-        </li>
-        <li>
-          <NavLink to="/Scp682">SCP-682</NavLink>
-        </li>
-      </ul>
-    </nav>
+        <ul className={menuOpen ? "open" : ""}>
+          <li>
+            <NavLink to="/Scp049">SCP-049</NavLink>
+          </li>
+          <li>
+            <NavLink to="/Scp096">SCP-096</NavLink>
+          </li>
+          <li>
+            <NavLink to="/Scp106">SCP-106</NavLink>
+          </li>
+          <li>
+            <NavLink to="/Scp173">SCP-173</NavLink>
+          </li>
+          <li>
+            <NavLink to="/Scp682">SCP-682</NavLink>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }
 
