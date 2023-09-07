@@ -18,17 +18,17 @@
 //         SCP Foundation
 //       </Link>
 //       <ul>
-//         <CustomLink to="/Scp049">SCP-049</CustomLink>
-//         <CustomLink to="/Scp096">SCP-096</CustomLink>
-//         <CustomLink to="/Scp106">SCP-106</CustomLink>
-//         <CustomLink to="/Scp173">SCP-173</CustomLink>
-//         <CustomLink to="/Scp682">SCP-682</CustomLink>
+//         <NavLink to="/Scp049">SCP-049</NavLink>
+//         <NavLink to="/Scp096">SCP-096</NavLink>
+//         <NavLink to="/Scp106">SCP-106</NavLink>
+//         <NavLink to="/Scp173">SCP-173</NavLink>
+//         <NavLink to="/Scp682">SCP-682</NavLink>
 //       </ul>
 //     </nav>
 //   );
 // }
 
-// function CustomLink({ to, children, ...props }) {
+// function NavLink({ to, children, ...props }) {
 //   const resolvedPath = useResolvedPath(to);
 //   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 
@@ -43,51 +43,57 @@
 
 import React, { useState } from "react";
 import SCPlogo from "./assets/SCP logo.png";
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import SubButton from "./SubButton";
+// import { Link, NavLink, useMatch, useResolvedPath } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Nav.css";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
-    <nav className={`navBar ${menuOpen ? "open" : ""}`}>
+    <nav>
       <img src={SCPlogo} id="scpLogo" alt="SCP logo" />
+
       <Link to="/" className="site-title">
         SCP Foundation
       </Link>
-      <div
-        className={`menu-icon ${menuOpen ? "open" : ""}`}
-        onClick={toggleMenu}
-      >
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
+
+      <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
       </div>
-      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <CustomLink to="/Scp049">SCP-049</CustomLink>
-        <CustomLink to="/Scp096">SCP-096</CustomLink>
-        <CustomLink to="/Scp106">SCP-106</CustomLink>
-        <CustomLink to="/Scp173">SCP-173</CustomLink>
-        <CustomLink to="/Scp682">SCP-682</CustomLink>
+
+      <ul className={menuOpen ? "open" : ""}>
+        <li>
+          <NavLink to="/Scp049">SCP-049</NavLink>
+        </li>
+        <li>
+          <NavLink to="/Scp096">SCP-096</NavLink>
+        </li>
+        <li>
+          <NavLink to="/Scp106">SCP-106</NavLink>
+        </li>
+        <li>
+          <NavLink to="/Scp173">SCP-173</NavLink>
+        </li>
+        <li>
+          <NavLink to="/Scp682">SCP-682</NavLink>
+        </li>
       </ul>
     </nav>
   );
 }
 
-function CustomLink({ to, children, ...props }) {
-  const resolvedPath = useResolvedPath(to);
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+// function CustomLink({ to, children, ...props }) {
+//   const resolvedPath = useResolvedPath(to);
+//   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 
-  return (
-    <li className={isActive ? "active" : ""}>
-      <Link to={to} {...props}>
-        {children}
-      </Link>
-    </li>
-  );
-}
+//   return (
+//     <li className={isActive ? "active" : ""}>
+//       <Link to={to} {...props}>
+//         {children}
+//       </Link>
+//     </li>
+//   );
+// }
