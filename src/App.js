@@ -8,6 +8,8 @@ import SCP096 from "./Scp096.js";
 import SCP106 from "./Scp106.js";
 import SCP173 from "./Scp173.js";
 import SCP682 from "./Scp682.js";
+import CRUD from "./CRUD.js";
+import UploadJSON from "./UploadJSON.js";
 import "./styles.css";
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/CRUD" element={<CRUD />} />
+            <Route path="/UploadJSON" element={<UploadJSON />} />
             <Route path="/Scp049" element={<SCP049 />} />
             <Route path="/Scp096" element={<SCP096 />} />
             <Route path="/Scp106" element={<SCP106 />} />

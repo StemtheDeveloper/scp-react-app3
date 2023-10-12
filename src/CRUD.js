@@ -10,18 +10,30 @@ import {
 } from "firebase/firestore";
 
 function CRUD() {
-  const [subjectID, setSubjectID] = useState("");
   const [subjectName, setSubjectName] = useState("");
   const [subjectClass, setSubjectClass] = useState("");
   const [subjectDescription, setSubjectDescription] = useState("");
   const [subjectContainment, setSubjectContainmentProcedures] = useState("");
   const [subjectImage, setSubjectImage] = useState("");
+  const [readData, setReadData] = useState([]);
+  const [id, setId] = useState("");
+  const [showDoc, setShowDoc] = useState(false);
+
+  useEffect(() => {
+    const getData = async () => {
+      const ourDocsToRead = await getDocs(OurCollection);
+      setReadData(
+        ourDocsToRead.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+      );
+    };
+    getData();
+  }, []);
 
   const OurCollection = collection(db, "SCP-Subjects");
 
   const crudCreate = async () => {
     await addDoc(OurCollection, {
-      ID: subjectID,
+      ID: id,
       Name: subjectName,
       Class: subjectClass,
       Description: subjectDescription,
@@ -30,12 +42,44 @@ function CRUD() {
     });
   };
 
+  const crudDelete = async (id) => {
+    const docToDelete = doc(db, "SCP-Subjects", id);
+    await deleteDoc(docToDelete);
+  };
+
+  const showEdit = async (id, name, description, containment, image) => {
+    setId(id);
+    setSubjectName(name);
+    setSubjectDescription(description);
+    setSubjectContainmentProcedures(containment);
+    setSubjectImage(image);
+    setShowDoc(true);
+  };
+
+  const crudUpdate = async () => {
+    const updateSubject = doc(db, "SCP-Subjects", id);
+    await updateDoc(updateSubject, {
+      Name: subjectName,
+      Class: subjectClass,
+      Description: subjectDescription,
+      Containment: subjectContainment,
+      Image: subjectImage,
+    });
+
+    setShowDoc(false);
+    setSubjectName("");
+    setSubjectClass("");
+    setSubjectDescription("");
+    setSubjectContainmentProcedures("");
+    setSubjectImage("");
+  };
+
   return (
     <>
       <form>
         <input
-          value={subjectID}
-          onChange={(id) => setSubjectID(id.target.value)}
+          value={id}
+          onChange={(id) => setId(id.target.value)}
           placeholder="ID"
         />
         <input
@@ -67,8 +111,37 @@ function CRUD() {
           onChange={(image) => setSubjectImage(image.target.value)}
           placeholder="Image"
         />
-        <button onClick={crudCreate}>Add Subject</button>
+        {!showDoc ? (
+          <button onClick={crudCreate}>Create</button>
+        ) : (
+          <button onClick={crudUpdate}>Update</button>
+        )}
       </form>
+
+      <hr />
+      {readData.map((values) => (
+        <div key={values.ID}>
+          <h1>{values.Name}</h1>
+          <h2>{values.Class}</h2>
+          <p>{values.Description}</p>
+          <p>{values.Containment}</p>
+          <img src={values.Image} alt={values.Name} />
+          <button onClick={() => crudDelete(values.id)}>Delete</button>{" "}
+          <button
+            onClick={() =>
+              showEdit(
+                values.id,
+                values.Name,
+                values.Description,
+                values.Containment,
+                values.Image
+              )
+            }
+          >
+            Edit
+          </button>
+        </div>
+      ))}
     </>
   );
 }

@@ -67,6 +67,15 @@ export default function Nav() {
 
         <ul className={menuOpen ? "open" : ""}>
           <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/CRUD">CRUD</NavLink>
+          </li>
+          <li>
+            <NavLink to="/UploadJSON">Upload JSON</NavLink>
+          </li>
+          <li>
             <NavLink to="/Scp049">SCP-049</NavLink>
           </li>
           <li>
