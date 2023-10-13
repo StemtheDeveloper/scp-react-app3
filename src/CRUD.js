@@ -81,16 +81,19 @@ function CRUD() {
           value={id}
           onChange={(id) => setId(id.target.value)}
           placeholder="ID"
+          required
         />
         <input
           value={subjectName}
           onChange={(name) => setSubjectName(name.target.value)}
           placeholder="Name"
+          required
         />
         <input
           value={subjectClass}
           onChange={(sclass) => setSubjectClass(sclass.target.value)}
           placeholder="Class"
+          required
         />
         <input
           value={subjectDescription}
@@ -98,6 +101,7 @@ function CRUD() {
             setSubjectDescription(description.target.value)
           }
           placeholder="Description"
+          required
         />
         <input
           value={subjectContainment}
@@ -105,11 +109,13 @@ function CRUD() {
             setSubjectContainmentProcedures(containment.target.value)
           }
           placeholder="Containment Procedures"
+          required
         />
         <input
           value={subjectImage}
           onChange={(image) => setSubjectImage(image.target.value)}
           placeholder="Image"
+          required
         />
         {!showDoc ? (
           <button onClick={crudCreate}>Create</button>
